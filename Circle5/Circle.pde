@@ -1,30 +1,32 @@
-class Circle {
+class CircleShape {
   float x, y;
   float radius;
   color c = color(255,255,0);
   
   // Default constructor
-  Circle() {
-    x = width/2;
-    y = height/2;
-    radius = 10;    
+ CircleShape() {
+    this.radius = 10;
+    x = width/2 + this.radius;
+    y = height/2;    
   }
 
-  // Constructor with just the radius
-  Circle(float radius) {
-
+  // Constructor with color and radius
+  CircleShape(color c, float radius) {
+    this.c = c;
     this.radius = radius;  
+    this.x =  radius;
+    this.y =  radius;    
   }
 
   // Parameterized constructor
-  Circle(float x, float y, float radius) {
+  CircleShape(float x, float y, float radius) {
     this.x = x;
     this.y = y;
     this.radius = radius;
   }
 
   // Parameterized constructor
-  Circle(color c, float x, float y, float radius) {
+  CircleShape(color c, float x, float y, float radius) {
     this.x = x;
     this.y = y;
     this.radius = radius;
